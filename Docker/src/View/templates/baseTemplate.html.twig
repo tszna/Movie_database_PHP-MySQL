@@ -33,6 +33,7 @@
 			return element[i];
 		};
 		return tablica_kluczy_obiektu.map(funkcja_iterujaca_po_elementach_tablicy);
+		//return Object.keys(element).map(function(i) {return element[i]; });
 	};
 
 	var filmBox = new FilmBox($('#results'));
@@ -82,19 +83,29 @@
 
 	var filters = new Filters({
 		filters: filtersArray,
-		url: 'http://localhost/filmy/lista',
+		url: 'http://localhost:2300/lista',
 		filtersElement: $('.filters')
 	});
 
 	filters.init();
 	{% if can('title') %}
-		filterTitle.initSearch('http://localhost/filmy/szukaj-tytulu');
+		filterTitle.initSearch('http://localhost:2300/szukaj-tytulu');
 	{% endif %}
 	SelectFilter.init();
 	InputFilter.init();
 	pagination.render();
 	
-
+//	$('input#title').focus(function() {
+//		this.placeholder = 'Hello';
+//	});
+	
+//	$('input#title').focusout(function() {
+//		this.placeholder = 'Tytuł';
+//	});
+	
+//	$('#placeholder').keyup(function () {
+//		$('input#title').attr('placeholder', this.value);
+//	});
 
 	var changePage = function(newPage) {
 		page = newPage;

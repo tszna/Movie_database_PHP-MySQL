@@ -4,9 +4,8 @@ namespace App;
 
 use Exception;
 use App\ResponseInterface;
-/**
- *
- */
+
+
 class Main
 {
 	/**

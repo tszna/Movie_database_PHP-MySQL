@@ -2,9 +2,7 @@
 
 namespace App\Helper;
 
-/**
- *
- */
+
 class FilterPermissions
 {
 	/**

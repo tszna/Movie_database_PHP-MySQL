@@ -4,9 +4,7 @@ namespace App\Model;
 
 use App\Helper\DB;
 
-/**
- *
- */
+
 class Category extends BaseModel
 {
 	public const TABLE = 'category';

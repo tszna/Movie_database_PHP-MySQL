@@ -6,9 +6,8 @@ use App\View\View;
 use App\Helper\Redirect;
 use App\Model\User as UserModel;
 use App\Model\Permission as PermissionModel;
-/**
- *
- */
+
+
 class User
 {
 	public function index()

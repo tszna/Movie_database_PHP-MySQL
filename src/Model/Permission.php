@@ -4,9 +4,7 @@ namespace App\Model;
 
 use App\Helper\DB;
 
-/**
- *
- */
+
 class Permission extends BaseModel
 {
 	public const TABLE = 'permission';

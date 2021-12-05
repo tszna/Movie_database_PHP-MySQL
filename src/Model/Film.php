@@ -5,9 +5,7 @@ namespace App\Model;
 use App\Helper\DB;
 use App\Helper\Redirect;
 
-/**
- *
- */
+
 class Film extends BaseModel
 {
 	public const TABLE = 'film';
@@ -155,7 +153,6 @@ class Film extends BaseModel
 	private function supplyDirForImages(array &$data): void
 	{
 		foreach ($data as &$v) {
-			//s($v['img']);
 			$v['img'] = Redirect::APP_URL . $v['img'];
 		}
 	}

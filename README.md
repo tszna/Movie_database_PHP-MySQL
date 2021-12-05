@@ -14,7 +14,14 @@ Jest to aplikacja wyświetlająca listę filmów, inspirowana tym co można znal
 <img src="https://i.imgur.com/SzDsNrG.gif" alt="operation in filtering module">
 
 <h4>Instalacja projektu</h4>
-Po pobraniu projektu należy umieścić go w katalogu o nazwie "filmy", a następnie wpisać w terminalu komendę:
+Po pobraniu projektu należy umieścić go w katalogu o nazwie "filmy", a następnie uruchomić terminal w głównym katalogu aplikacji i wpisać w terminalu komendę:
 <pre><code>composer install</code></pre>
-W kolejnym kroku, na podstawie danych podanych w klasie połączenia z bazą danych, stworzyć użytkownika w panelu zarządzania SQL i zaimportować plik SQL w celu wprowadzenia danych do aplikacji.
+Następnie w bazie mysql utworzyć bazę danych o nazwie: film, i użytkownika z uprawnieniami do tej bazy danych o loginie: film i haśle: film.
+W kolejnym kroku należy zaimportować do stworzonej bazy danych plik sql, który znajduje się w głównym katalogu aplikacji.
 Następnie uruchomić moduł PHP i MySQL np. w programie xampp. Strona główna aplikacji jest pod adresem: /filmy
+
+<h4>Uruchomienia projektu poprzez docker</h4>
+Po pobraniu projektu należy skopiować zawartość katalogu Docker i wkleić do głównego katalogu aplikacji, w taki sposób aby nadpisać istniejące pliki. Następnie należy uruchomić terminal w głównym katalogu aplikacji i wpisać komendę:
+<pre><code>docker-compose up</code></pre>
+W kolejnym kroku należy uruchmić phpmyadmin i zaimportować do istniejącej bazy danych plik sql, który znajduje się w głównym katalogu aplikacji.
+Kontener phpmyadmin nasłuchuje domyślnie na porcie 2090, a aplikacja wyświetla się na porcie 2300. Domyślne porty można zmienić w pliku docker-compose.yml

@@ -9,9 +9,8 @@ use App\Model\Film as FilmModel;
 use App\Model\Category;
 use App\Model\Director;
 use App\View\View;
-/**
- *
- */
+
+
 class Film
 {
 	/**

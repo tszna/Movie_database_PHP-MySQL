@@ -4,9 +4,7 @@ namespace App\Model;
 
 use App\Helper\DB;
 
-/**
- *
- */
+
 class Director extends BaseModel
 {
 	public const TABLE = 'director';

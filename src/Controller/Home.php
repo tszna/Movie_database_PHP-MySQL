@@ -3,9 +3,8 @@
 namespace App\Controller;
 
 use App\View\View;
-/**
- *
- */
+
+
 class Home
 {
 	public function index()

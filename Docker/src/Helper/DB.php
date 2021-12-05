@@ -4,7 +4,9 @@ namespace App\Helper;
 
 use PDO;
 
-
+/**
+ *
+ */
 class DB
 {
 	/**
@@ -23,7 +25,7 @@ class DB
 	{
 		if (!isset(self::$connection)) {
 			self::$connection = new PDO(
-				'mysql:host=localhost;port=3306;dbname=film;charset=utf8',
+				'mysql:host=mov-mysql;port=3306;dbname=film;charset=utf8',
 				'film',
 				'film',
 				[\PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC]

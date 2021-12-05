@@ -63,14 +63,8 @@ class View implements ResponseInterface
         $loader = new \Twig_Loader_Filesystem(self::TEMPLATES_PATH);
         // Utworzenie klasy Twig przechowywującej konfigurację
         $this->twig = new \Twig_Environment($loader);
-
-		//$later = ['App\Helper\FilterPermissions', 'can'];
 		$canFunction = new TwigFunction('can', [FilterPermissions::class, 'can']);
 		$this->twig->addFunction($canFunction);
-
-		//$can = function($string) {
-		//	FilterPermissions::can($string);
-		//}
 
 		$this->_assets = [
 			0 => 'assets/css/ext/fa-all.css',

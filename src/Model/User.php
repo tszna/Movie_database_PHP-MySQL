@@ -4,9 +4,7 @@ namespace App\Model;
 
 use App\Helper\DB;
 
-/**
- *
- */
+
 class User extends BaseModel
 {
 	public const TABLE = 'user';

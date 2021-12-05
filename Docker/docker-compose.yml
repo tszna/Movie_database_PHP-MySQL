@@ -1,0 +1,45 @@
+services:
+  mov-php:
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    container_name: mov-php
+    ports:
+      - "2300:80"
+    volumes:
+      - ./:/var/www/html/
+    networks:
+      - mov-network
+
+  mov-mysql:
+    image: mysql:8.0.26
+    container_name: mov-mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: film
+      MYSQL_USER: film
+      MYSQL_PASSWORD: film
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/conf.d/mysql.cnf
+    networks:
+      - mov-network
+
+  mov-phpmyadmin:
+    image: phpmyadmin
+    container_name: mov-phpmyadmin
+    environment:
+      PMA_HOST: mov-mysql
+      PMA_USER: root
+      PMA_PASSWORD: ""
+    ports:
+      - 2090:80
+    networks:
+      - mov-network
+
+networks:
+  mov-network:
+    driver: "bridge"

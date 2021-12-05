@@ -3,8 +3,9 @@
 namespace App\Helper;
 
 use App\ResponseInterface;
-
-
+/**
+ *
+ */
 class Redirect implements ResponseInterface
 {
 	/**
@@ -12,7 +13,7 @@ class Redirect implements ResponseInterface
 	 *
 	 * @var string
 	 */
-	const APP_URL = 'http://localhost/filmy/';
+	const APP_URL = 'http://localhost:2300/';
 
 	/**
 	 * Adres na który nastąpi przekierowanie.

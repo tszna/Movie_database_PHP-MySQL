@@ -2,9 +2,7 @@
 
 namespace App\Model;
 
-/**
- *
- */
+
 class FilterName
 {
 	public const FILTER_TITLE = 'title';
